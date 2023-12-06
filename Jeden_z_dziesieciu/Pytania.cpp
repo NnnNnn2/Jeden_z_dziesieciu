@@ -45,13 +45,13 @@ Pytanie* Pytania::GetLosowe()
 {
 	srand((unsigned)time(NULL));
 	int random = (rand() % this->GetIlosc());
-	Pytanie* temp = this->pytania[random];
-	this->pytania.erase(this->pytania.begin() + random);
+	Pytanie* temp = this->niewykorzystane[random];
+	this->niewykorzystane.erase(this->niewykorzystane.begin() + random);
 	return temp;
 }
 int Pytania::GetIlosc()
 {
-	return pytania.size();
+	return niewykorzystane.size();
 }
 Pytania::~Pytania()
 {

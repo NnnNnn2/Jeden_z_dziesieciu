@@ -19,5 +19,5 @@ std::string Pytanie::GetOdpowiedz()
 
 void Pytanie::wypiszPytanie()
 {
-	std::cout << this->pytanie << "\n Odp: " << this->odpowiedz;
+	std::cout << this->pytanie << "\nOdp: " << this->odpowiedz;
 }

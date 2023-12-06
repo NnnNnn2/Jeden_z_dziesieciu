@@ -1,15 +1,17 @@
 #include "Pytania.h"
 #include "fstream"
 #include <iostream>
+#include <cstdlib>
 
 Pytania::Pytania() 
 {
-	this->i = 0;
+
 }
 void Pytania::addPytanie(std::string pytanie, std::string odpowiedz)
 {
 	Pytanie* temp = new Pytanie(pytanie, odpowiedz);
 	this->pytania.push_back(temp);
+	this->niewykorzystane.push_back(temp);
 }
 void Pytania::wczytajPytania(std::string scierzka)
 {
@@ -35,9 +37,17 @@ void Pytania::wypiszPytania()
 {
 	for (int i = 0; i < this->pytania.size(); i++)
 	{
-		std::cout << std::endl;
+		std::cout << "\n\n";
 		this->pytania[i]->wypiszPytanie();
 	}
+}
+Pytanie* Pytania::GetLosowe()
+{
+	srand((unsigned)time(NULL));
+	int random = (rand() % this->GetIlosc());
+	Pytanie* temp = this->pytania[random];
+	this->pytania.erase(this->pytania.begin() + random);
+	return temp;
 }
 int Pytania::GetIlosc()
 {

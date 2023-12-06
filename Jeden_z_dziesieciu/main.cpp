@@ -9,9 +9,21 @@ int main()
 	cout << "Podaj ilosc graczy: ";
 	cin >> iloscGraczy;
 	Gra* gra = new Gra(iloscGraczy);
+	Pytania* pytania = gra->GetPytania();
 	system("cls");
 	gra->GetGracze()->WypiszGraczy();
-	cout << "\n Pytania:";
-	gra->GetPytania()->wypiszPytania();
+	//cout << "\n Pytania:";
+	//pytania->wypiszPytania();
+	int iloscPytan = pytania->GetIlosc();
+	//*/
+	cout << iloscPytan;
+	cout << "\n\nLosowe pytania: ";
+	for (int i = 0; i < iloscPytan; i++)
+	{
+		cout << i;
+		pytania->GetLosowe()->wypiszPytanie();
+		cout << "\n\n";
+	}
+	//*/
 	return 0;
 }

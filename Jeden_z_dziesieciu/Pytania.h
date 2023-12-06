@@ -8,7 +8,7 @@ class Pytania
 {
 private:
 	std::vector<Pytanie*> pytania;
-	int i;
+	std::vector<Pytanie*> niewykorzystane;
 
 public:
 	Pytania();
@@ -16,6 +16,7 @@ public:
 	void wczytajPytania(std::string scierzka);
 	void wczytajPytania();
 	void wypiszPytania();
+	Pytanie* GetLosowe();
 	int GetIlosc();
 	~Pytania();
 };

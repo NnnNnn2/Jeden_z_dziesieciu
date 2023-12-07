@@ -123,6 +123,20 @@ void Gra::Runda()
 				this->PytanieS(0, 0, i);
 			}
 		}
+		this->runda++;
+	}
+	if (this->runda == 2)
+	{
+		this->wyswietlacz->WypiszRunde(runda);
+		this->Czekaj();
+		this->wyswietlacz->WypiszGraczy(true, -1);
+		//czy przejsc do finalu
+		while (this->gracze->GetIloscAktywnych() > 3)
+		{
+			this->Czekaj();
+			this->PytanieS(0, 0, -1);
+		}
+		this->runda++;
 	}
 }
 

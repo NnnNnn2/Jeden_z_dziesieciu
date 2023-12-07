@@ -17,7 +17,7 @@ public:
 	void WpiszGraczy();
 	void WypiszGraczy();
 	int GetIlosc();
-	
+	int GetIloscAktywnych();
 
 	//Destruktor
 	~Gracze();

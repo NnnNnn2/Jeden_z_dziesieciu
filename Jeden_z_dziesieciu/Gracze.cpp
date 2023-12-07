@@ -40,6 +40,15 @@ int Gracze::GetIlosc()
 	return this->ilosc;
 }
 
+int Gracze::GetIloscAktywnych()
+{
+	int licznik = 0;
+	for (int i = 0; i < this->ilosc; i++)
+		if (this->gracze[i]->GetSzanse() > 0)
+			licznik++;
+	return licznik;
+}
+
 Gracze::~Gracze()
 {
 	for (int i = 0; i < this->ilosc; i++)

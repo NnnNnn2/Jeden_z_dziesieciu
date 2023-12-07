@@ -7,10 +7,15 @@ Wyswietlacz::Wyswietlacz(Gracze* gracze)
 	this->gracze = gracze;
 }
 
-void Wyswietlacz::WypiszGracza(Gracz* gracz, bool punkty)
+void Wyswietlacz::WypiszGracza(Gracz* gracz, bool punkty, bool aktywny)
 {
-	std::cout << gracz->GetNumer() + 1 << ". " << gracz->GetImie();
-	for (int i = 0; i < (PRZERWA - gracz->GetImie().length()); i++)
+	std::string imie;
+	if (aktywny)
+		imie = "[ " + gracz->GetImie() + " ]";
+	else
+		imie = gracz->GetImie();
+	std::cout << gracz->GetNumer() + 1 << ". " << imie;
+	for (int i = 0; i < (PRZERWA - imie.length()); i++)
 		std::cout << " ";
 	if (punkty)
 		std::cout << "\t" << gracz->GetPunkty();
@@ -18,24 +23,44 @@ void Wyswietlacz::WypiszGracza(Gracz* gracz, bool punkty)
 	for (int j = 0; j < gracz->GetSzanse(); j++)
 		std::cout << "# ";
 }
-void Wyswietlacz::WypiszGraczy(bool punkty)
+void Wyswietlacz::WypiszGraczy(bool punkty, int aktywny)
 {
 	for (int i = 0; i < 20; i++)
 		std::cout << "\n";
 	for (int i = 0; i < this->gracze->GetIlosc(); i+=2)
 	{
-		WypiszGracza(this->gracze->GetGracz(i), punkty);
+		bool czyAktywny = (i == aktywny);
+		WypiszGracza(this->gracze->GetGracz(i), punkty, czyAktywny);
 		std::cout << "\t\t\t\t\t";
 		if (i < this->gracze->GetIlosc() - 1)
 		{
-			WypiszGracza(this->gracze->GetGracz(i + 1), punkty);
+			czyAktywny = (i + 1 == aktywny);
+			WypiszGracza(this->gracze->GetGracz(i + 1), punkty,czyAktywny);
 			std::cout << "\n";
 		}
 	}
 }
-void WypiszPytanie(Pytanie* pytanie)
+void Wyswietlacz::WypiszPytanie(Pytanie* pytanie, bool punkty, int aktywny)
 {
+	system("cls");
+	std::cout << pytanie->GetPytanie() << "\n\n";
+	this->WypiszGraczy(punkty, aktywny);
+}
 
+void Wyswietlacz::WypiszOdpowiedz(Pytanie* pytanie, bool punkty, int aktywny)
+{
+	system("cls");
+	std::cout << pytanie->GetPytanie() << "\n\nODPOWIED: " << pytanie->GetOdpowiedz();
+	this->WypiszGraczy(punkty, aktywny);
+}
+
+void Wyswietlacz::WypiszRunde(int runda)
+{
+	system("cls");
+	if (runda != 3)
+		std::cout << "RUNDA " << runda;
+	else
+		std::cout << "FINA£!";
 }
 
 Wyswietlacz::~Wyswietlacz()

@@ -1,5 +1,6 @@
 #define ILOSC_PYTAN_FINALOWYCH 10
 #include "Gra.h"
+#include <conio.h>
 
 Gra::Gra(int iloscGraczy)
 {
@@ -36,12 +37,74 @@ Wyswietlacz* Gra::GetWyswietlacz()
 
 void Gra::Graj()
 {
-	this->runda = 1;
 	int iloscGraczy = this->gracze->GetIlosc();
 	int iloscPytan = this->pytania->GetIlosc();
 	if (iloscGraczy > 0 && iloscPytan >= (iloscGraczy * 2 + ILOSC_PYTAN_FINALOWYCH))
 	{
+		this->runda = 1;
+		this->Runda();
+	}
+}
 
+void Gra::Czekaj()
+{
+	char znak = 0;
+	while (znak != ' ')
+		znak = _getch();
+	return;
+}
+
+void Gra::PytanieS(int mnoznik, bool punkty)
+{
+	char znak = 0;
+	bool brakSzans = true;
+	int nrGracza;
+	Pytanie* pytanie = this->pytania->GetLosowe();
+	this->wyswietlacz->WypiszPytanie(pytanie, punkty, -1);
+	//wybor gracza
+	while (brakSzans)
+	{
+		znak = 0;
+		while (znak < '1' || znak > '0' + gracze->GetIlosc())
+		{
+			znak = _getch();
+			if (znak == '0' && gracze->GetIlosc() > 9)
+			{
+				znak = 58;
+				break;
+			}
+		}
+		nrGracza = (int)znak - 49;	//odejmujemy kod znaku '0' aby z char zrobiæ int
+		if (this->gracze->GetGracz(nrGracza)->GetSzanse() > 0)
+			brakSzans = false;
+	}
+	
+	this->wyswietlacz->WypiszPytanie(pytanie, punkty, nrGracza);
+	this->Czekaj();
+	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
+
+	//dobrze / zle
+	while (znak != 'z' && znak != 'd')
+		znak = _getch();
+	//zle
+	if (znak == 'z')
+		gracze->GetGracz(nrGracza)->DecSzanse();
+	if (znak == 'd')
+		gracze->GetGracz(nrGracza)->IncPunkty(mnoznik);
+
+	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
+}
+
+void Gra::Runda()
+{
+	//Runda Pierwsza
+	if (this->runda == 1)
+	{
+		this->wyswietlacz->WypiszRunde(runda);
+		this->Czekaj();
+		this->wyswietlacz->WypiszGraczy(false, -1);
+		this->Czekaj();
+		this->PytanieS(0, 0);
 	}
 }
 

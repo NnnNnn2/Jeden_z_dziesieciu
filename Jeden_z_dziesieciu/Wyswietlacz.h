@@ -5,14 +5,15 @@
 class Wyswietlacz
 {
 private:
-	void WypiszGracza(Gracz* gracz, bool punkty);
+	void WypiszGracza(Gracz* gracz, bool punkty, bool aktywny);
 	
 	Gracze* gracze;
 public:
 	Wyswietlacz(Gracze* gracze);
-	void WypiszGraczy(bool punkty);
-	void WypiszPytanie(Pytanie* pytanie);
-	void WypiszOdpowiedz(Pytanie* pytanie);
+	void WypiszGraczy(bool punkty, int aktywny);
+	void WypiszPytanie(Pytanie* pytanie, bool punkty, int aktywny);
+	void WypiszOdpowiedz(Pytanie* pytanie, bool punkty, int aktywny);
+	void WypiszRunde(int runda);
 	~Wyswietlacz();
 
 };

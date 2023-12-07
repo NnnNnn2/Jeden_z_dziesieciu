@@ -49,9 +49,9 @@ void Gracz::DecSzanse()
 	if (szanse > 0)
 		szanse--;
 }
-void Gracz::IncPunkty()
+void Gracz::IncPunkty(int punkty)
 {
-	punkty++;
+	this->punkty += punkty;
 }
 void Gracz::Wypisz()
 {

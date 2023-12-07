@@ -23,7 +23,7 @@ public:
 	void SetSzanse(int szanse);
 
 	void DecSzanse();
-	void IncPunkty();
+	void IncPunkty(int numer);
 	void Wypisz();
 
 	//Destruktor

@@ -29,6 +29,11 @@ Pytania* Gra::GetPytania()
 	return this->pytania;
 }
 
+Wyswietlacz* Gra::GetWyswietlacz()
+{
+	return this->wyswietlacz;
+}
+
 void Gra::Graj()
 {
 	this->runda = 1;

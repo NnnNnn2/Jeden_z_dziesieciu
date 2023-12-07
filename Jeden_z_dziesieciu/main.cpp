@@ -15,7 +15,7 @@ int main()
 	//cout << "\n Pytania:";
 	//pytania->wypiszPytania();
 	int iloscPytan = pytania->GetIlosc();
-	//*/
+	/*/
 	cout << iloscPytan;
 	cout << "\n\nLosowe pytania: ";
 	for (int i = 0; i < iloscPytan; i++)
@@ -25,5 +25,6 @@ int main()
 		cout << "\n\n";
 	}
 	//*/
+	gra->GetWyswietlacz()->WypiszGraczy(true);
 	return 0;
 }

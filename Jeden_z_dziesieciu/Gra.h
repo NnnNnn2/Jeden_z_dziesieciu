@@ -17,6 +17,7 @@ public:
 	Gra(int iloscGraczy, std::string scierzka);
 	Gracze* GetGracze();
 	Pytania* GetPytania();
+	Wyswietlacz* GetWyswietlacz();
 	void Graj();
 	~Gra();
 };

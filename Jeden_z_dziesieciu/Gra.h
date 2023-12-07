@@ -12,7 +12,7 @@ private:
 	Wyswietlacz* wyswietlacz;
 	int runda;
 	void Czekaj();
-	void PytanieS(int mnoznik, bool punkty);
+	void PytanieS(int mnoznik, bool punkty, int gracz);
 	void Runda();
 
 public:

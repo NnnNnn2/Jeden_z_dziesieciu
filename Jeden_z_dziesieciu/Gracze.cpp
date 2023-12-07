@@ -12,6 +12,10 @@ void Gracze::DodajGracza(int numer, std::string imie)
 	Gracz* temp = new Gracz(numer, imie);
 	this->gracze[numer] = temp;
 }
+Gracz* Gracze::GetGracz(int i)
+{
+	return this->gracze[i];
+}
 void Gracze::WpiszGraczy()
 {
 	for (int i = 0; i < ilosc; i++)

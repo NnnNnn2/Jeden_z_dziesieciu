@@ -30,7 +30,10 @@
     <ClCompile Include="Pytania.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="gra.cpp">
+    <ClCompile Include="Gra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wyswietlacz.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Pytania.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wyswietlacz.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

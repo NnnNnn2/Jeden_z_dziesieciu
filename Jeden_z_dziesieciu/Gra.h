@@ -1,6 +1,7 @@
 #pragma once
 #include "Gracze.h"
 #include "Pytania.h"
+#include "Wyswietlacz.h"
 #include <string>
 
 class Gra
@@ -8,6 +9,7 @@ class Gra
 private:
 	Pytania* pytania;
 	Gracze* gracze;
+	Wyswietlacz* wyswietlacz;
 	int runda;
 
 public:

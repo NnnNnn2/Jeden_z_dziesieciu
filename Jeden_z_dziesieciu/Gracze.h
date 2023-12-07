@@ -6,8 +6,8 @@ class Gracze
 private:
 	int ilosc;
 	Gracz** gracze;
-
 	void DodajGracza(int numer, std::string imie);
+
 public:
 	//Konstruktor
 	Gracze(int ilosc);

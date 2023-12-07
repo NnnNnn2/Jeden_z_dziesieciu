@@ -127,10 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gra.cpp" />
+    <ClCompile Include="Gra.cpp" />
     <ClCompile Include="Gracz.cpp" />
     <ClCompile Include="Gracze.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Wyswietlacz.cpp" />
     <ClCompile Include="Pytania.cpp" />
     <ClCompile Include="Pytanie.cpp" />
   </ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="Gra.h" />
     <ClInclude Include="Gracz.h" />
     <ClInclude Include="Gracze.h" />
+    <ClInclude Include="Wyswietlacz.h" />
     <ClInclude Include="Pytania.h" />
     <ClInclude Include="Pytanie.h" />
   </ItemGroup>

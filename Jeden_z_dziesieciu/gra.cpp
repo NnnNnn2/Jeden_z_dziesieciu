@@ -7,6 +7,7 @@ Gra::Gra(int iloscGraczy)
 	this->pytania = new Pytania();
 	this->gracze->WpiszGraczy();
 	this->pytania->wczytajPytania();
+	this->wyswietlacz = new Wyswietlacz(gracze);
 }
 
 Gra::Gra(int iloscGraczy, std::string scierzka)
@@ -15,6 +16,7 @@ Gra::Gra(int iloscGraczy, std::string scierzka)
 	this->pytania = new Pytania();
 	this->gracze->WpiszGraczy();
 	this->pytania->wczytajPytania(scierzka);
+	this->wyswietlacz = new Wyswietlacz(gracze);
 }
 
 Gracze* Gra::GetGracze()

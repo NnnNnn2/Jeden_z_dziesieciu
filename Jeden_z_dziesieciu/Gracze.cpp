@@ -49,6 +49,34 @@ int Gracze::GetIloscAktywnych()
 	return licznik;
 }
 
+void Gracze::punktyZaSzanse(int mnorznik)
+{
+	for (int i = 0; i < this->ilosc; i++)
+		if (this->gracze[i]->GetSzanse() > 0)
+			this->gracze[i]->IncPunkty(this->gracze[i]->GetSzanse() * mnorznik);
+}
+
+void Gracze::Final()
+{
+	if (this->GetIloscAktywnych() == 3)
+	{
+		Gracz** temp = new Gracz * [3];
+		int  j = 0;
+		for (int i = 0; i < this->ilosc; i++)
+		{
+			if (this->gracze[i]->GetSzanse() > 0)
+			{
+				this->gracze[i]->IncPunkty(this->gracze[i]->GetSzanse());
+				this->gracze[i]->SetNumer(j);
+				temp[j] = this->gracze[i];
+				j++;
+			}
+		}
+		this->gracze = temp;
+		this->ilosc = 3;
+	}
+}
+
 Gracze::~Gracze()
 {
 	for (int i = 0; i < this->ilosc; i++)

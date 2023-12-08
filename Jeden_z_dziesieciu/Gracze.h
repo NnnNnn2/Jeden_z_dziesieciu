@@ -18,6 +18,8 @@ public:
 	void WypiszGraczy();
 	int GetIlosc();
 	int GetIloscAktywnych();
+	void punktyZaSzanse(int mnoznik);
+	void Final();
 
 	//Destruktor
 	~Gracze();

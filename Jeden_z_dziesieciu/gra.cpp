@@ -125,11 +125,12 @@ void Gra::Runda()
 		}
 		this->runda++;
 	}
+	//Runda Druga
 	if (this->runda == 2)
 	{
 		this->wyswietlacz->WypiszRunde(runda);
 		this->Czekaj();
-		this->wyswietlacz->WypiszGraczy(true, -1);
+		this->wyswietlacz->WypiszGraczy(false, -1);
 		//czy przejsc do finalu
 		while (this->gracze->GetIloscAktywnych() > 3)
 		{
@@ -137,6 +138,24 @@ void Gra::Runda()
 			this->PytanieS(0, 0, -1);
 		}
 		this->runda++;
+	}
+	//Final
+	if (this->runda == 3)
+	{
+		this->gracze->Final();
+		this->wyswietlacz->WypiszRunde(runda);
+		this->Czekaj();
+		this->wyswietlacz->WypiszGraczy(true, -1);
+		int zadanePytania = 0;
+		while (this->gracze->GetIloscAktywnych() > 0 && zadanePytania < ILOSC_PYTAN_FINALOWYCH)
+		{
+			this->Czekaj();
+			this->PytanieS(10, true, -1);
+			zadanePytania++;
+		}
+		this->gracze->punktyZaSzanse(10);
+		this->wyswietlacz->WypiszGraczy(true, -1);
+		_getch();
 	}
 }
 

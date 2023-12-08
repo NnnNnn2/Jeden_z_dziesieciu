@@ -32,6 +32,5 @@ int main()
 	while (true);*/
 	//gra->GetGracze()->GetGracz(1)->SetSzanse(2);
 	gra->Graj();
-	while (true);
 	return 0;
 }

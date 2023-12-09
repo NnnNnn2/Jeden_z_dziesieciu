@@ -44,6 +44,8 @@ void Pytania::wypiszPytania()
 Pytanie* Pytania::GetLosowe()
 {
 	srand((unsigned)time(NULL));
+	if (this->GetIlosc() < 1) 
+		exit(-1);
 	int random = (rand() % this->GetIlosc());
 	Pytanie* temp = this->niewykorzystane[random];
 	this->niewykorzystane.erase(this->niewykorzystane.begin() + random);

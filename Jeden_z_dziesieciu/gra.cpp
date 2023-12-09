@@ -1,4 +1,4 @@
-#define ILOSC_PYTAN_FINALOWYCH 10
+#define ILOSC_PYTAN_FINALOWYCH 40
 #include "Gra.h"
 #include <conio.h>
 
@@ -70,6 +70,11 @@ void Gra::PytanieS(int mnoznik, bool punkty, int gracz)
 			while (znak < '1' || znak > '0' + gracze->GetIlosc())
 			{
 				znak = _getch();
+				if (znak == 'p')
+				{
+					//pomin jak nikt sie nie zglosil
+					return;
+				}
 				if (znak == '0' && gracze->GetIlosc() > 9)
 				{
 					znak = 58;

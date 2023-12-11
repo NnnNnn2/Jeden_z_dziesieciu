@@ -9,7 +9,8 @@ int main()
 	int iloscGraczy;
 	cout << "Podaj ilosc graczy: ";
 	cin >> iloscGraczy;
-	Gra* gra = new Gra(iloscGraczy, "test.txt");
+	//Gra* gra = new Gra(iloscGraczy, "test.txt");
+	Gra* gra = new Gra(iloscGraczy, "pytania2.txt");
 	/*/Pytania* pytania = gra->GetPytania();
 	system("cls");
 	gra->GetGracze()->WypiszGraczy();

@@ -68,6 +68,7 @@ void Gracze::Final()
 			{
 				this->gracze[i]->IncPunkty(this->gracze[i]->GetSzanse());
 				this->gracze[i]->SetNumer(j);
+				this->gracze[i]->SetSzanse(3);
 				temp[j] = this->gracze[i];
 				j++;
 			}

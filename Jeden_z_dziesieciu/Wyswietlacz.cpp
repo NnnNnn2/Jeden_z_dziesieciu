@@ -1,10 +1,13 @@
 #define PRZERWA 15
+#define SZEROKOSC_OKNA 1280
+#define WYSOKOSC_OKNA 720
 #include "Wyswietlacz.h"
 #include <iostream>
 
 Wyswietlacz::Wyswietlacz(Gracze* gracze)
 {
 	this->gracze = gracze;
+	this->gui = new GUI(SZEROKOSC_OKNA, WYSOKOSC_OKNA);
 }
 
 void Wyswietlacz::WypiszGracza(Gracz* gracz, bool punkty, bool aktywny)
@@ -46,14 +49,12 @@ void Wyswietlacz::WypiszPytanie(Pytanie* pytanie, bool punkty, int aktywny)
 	std::cout << pytanie->GetPytanie() << "\n\n";
 	this->WypiszGraczy(punkty, aktywny);
 }
-
 void Wyswietlacz::WypiszOdpowiedz(Pytanie* pytanie, bool punkty, int aktywny)
 {
 	system("cls");
 	std::cout << pytanie->GetPytanie() << "\n\nODPOWIED: " << pytanie->GetOdpowiedz();
 	this->WypiszGraczy(punkty, aktywny);
 }
-
 void Wyswietlacz::WypiszRunde(int runda)
 {
 	system("cls");
@@ -61,6 +62,10 @@ void Wyswietlacz::WypiszRunde(int runda)
 		std::cout << "RUNDA " << runda;
 	else
 		std::cout << "FINA£!";
+}
+GUI* Wyswietlacz::GetGUI()
+{
+	return this->gui;
 }
 
 Wyswietlacz::~Wyswietlacz()

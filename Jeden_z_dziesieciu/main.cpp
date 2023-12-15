@@ -10,7 +10,7 @@ int main()
 	cout << "Podaj ilosc graczy: ";
 	cin >> iloscGraczy;
 	//Gra* gra = new Gra(iloscGraczy, "test.txt");
-	Gra* gra = new Gra(iloscGraczy, "pytania2.txt");
+	Gra* gra = new Gra(iloscGraczy, "pytania.txt");
 	/*/Pytania* pytania = gra->GetPytania();
 	system("cls");
 	gra->GetGracze()->WypiszGraczy();
@@ -31,7 +31,9 @@ int main()
 	char znak = _getch();
 	gra->GetWyswietlacz()->WypiszOdpowiedz(losowe, false,3);
 	while (true);*/
-	//gra->GetGracze()->GetGracz(1)->SetSzanse(2);
+	gra->GetGracze()->GetGracz(3)->SetSzanse(1);
+	gra->GetGracze()->GetGracz(1)->SetSzanse(0);
+	gra->GetWyswietlacz()->GetGUI()->WypiszGraczy(false, 5, gra->GetGracze());
 	gra->Graj();
 	return 0;
 }

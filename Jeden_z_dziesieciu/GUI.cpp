@@ -3,6 +3,7 @@
 #define KOLOR_AKTYWNEGO 0x05A9EAFF
 #define KOLOR_PRZEGRANEGO 0x1638FB20
 #define KOLOR_SZANSY 0xFFA404FF
+#define KOLOR_TEKSTU 0xFFFFFFFF
 
 #include "GUI.h"
 
@@ -53,7 +54,38 @@ void GUI::WypiszGracza(Gracz* gracz, bool punkty, bool aktywny, int posX, int po
 	}
 
 	//NAPISY
-
+	sf::Font czcionka;
+	if (czcionka.loadFromFile("impact.ttf"))
+	{
+		sf::Text tekst;
+		tekst.setFont(czcionka);
+		//imiona
+		tekst.setString(gracz->GetImie());
+		tekst.setCharacterSize(24);
+		tekst.setFillColor(sf::Color(KOLOR_TEKSTU));
+		sf::FloatRect ramkaTekstu = tekst.getLocalBounds();
+		tekst.setOrigin(ramkaTekstu.left + ramkaTekstu.width / 2.0f,
+			ramkaTekstu.top + ramkaTekstu.height / 2.0f);
+		int posTekstuX = posX + szerokosc / 2;
+		int posTekstuY = posY + 14;
+		tekst.setPosition(sf::Vector2f((float)posTekstuX, (float)posTekstuY));
+		okno.draw(tekst);
+		//numery/punkty
+		int numer;
+		if (punkty)
+			numer = gracz->GetPunkty();
+		else
+			numer = gracz->GetNumer() + 1;
+		tekst.setString(std::to_string(numer));
+		tekst.setCharacterSize(36);
+		ramkaTekstu = tekst.getLocalBounds();
+		tekst.setOrigin(ramkaTekstu.left + ramkaTekstu.width / 2.0f,
+			ramkaTekstu.top + ramkaTekstu.height / 2.0f);
+		posTekstuX = posX + szerokosc / 2;
+		posTekstuY = posY + 48;
+		tekst.setPosition(sf::Vector2f((float)posTekstuX, (float)posTekstuY));
+		okno.draw(tekst);
+	}
 }
 
 void GUI::WypiszGraczy(bool punkty, int aktywny, Gracze* gracze)

@@ -31,9 +31,6 @@ int main()
 	char znak = _getch();
 	gra->GetWyswietlacz()->WypiszOdpowiedz(losowe, false,3);
 	while (true);*/
-	gra->GetGracze()->GetGracz(3)->SetSzanse(1);
-	gra->GetGracze()->GetGracz(1)->SetSzanse(0);
-	gra->GetWyswietlacz()->GetGUI()->WypiszGraczy(false, 5, gra->GetGracze());
 	gra->Graj();
 	return 0;
 }

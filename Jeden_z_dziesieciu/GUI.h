@@ -13,5 +13,6 @@ private:
 public:
 	GUI(int szerokoscOkna, int wysokoscOkna);
 	void WypiszGraczy(bool punkty, int aktywny, Gracze* gracze);
+	void WypiszRunde(int runda);
 	~GUI();
 };

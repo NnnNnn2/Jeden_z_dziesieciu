@@ -1,6 +1,6 @@
 #define PRZERWA 15
-#define SZEROKOSC_OKNA 1280
-#define WYSOKOSC_OKNA 720
+#define SZEROKOSC_OKNA 1920
+#define WYSOKOSC_OKNA 1080
 #include "Wyswietlacz.h"
 #include <iostream>
 
@@ -42,6 +42,7 @@ void Wyswietlacz::WypiszGraczy(bool punkty, int aktywny)
 			std::cout << "\n";
 		}
 	}
+	gui->WypiszGraczy(punkty, aktywny, this->gracze);
 }
 void Wyswietlacz::WypiszPytanie(Pytanie* pytanie, bool punkty, int aktywny)
 {
@@ -62,6 +63,7 @@ void Wyswietlacz::WypiszRunde(int runda)
 		std::cout << "RUNDA " << runda;
 	else
 		std::cout << "FINA£!";
+	gui->WypiszRunde(runda);
 }
 GUI* Wyswietlacz::GetGUI()
 {

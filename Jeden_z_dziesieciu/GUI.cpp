@@ -58,16 +58,18 @@ void GUI::WypiszGracza(Gracz* gracz, bool punkty, bool aktywny, int posX, int po
 	if (czcionka.loadFromFile("impact.ttf"))
 	{
 		sf::Text tekst;
+		int rozmImie = (wysokosc - wysSzansy) / 3 - 4;
+		int rozmNum = (wysokosc - wysSzansy) / 3 * 2 - 4;
 		tekst.setFont(czcionka);
 		//imiona
 		tekst.setString(gracz->GetImie());
-		tekst.setCharacterSize(24);
+		tekst.setCharacterSize(rozmImie);
 		tekst.setFillColor(sf::Color(KOLOR_TEKSTU));
 		sf::FloatRect ramkaTekstu = tekst.getLocalBounds();
 		tekst.setOrigin(ramkaTekstu.left + ramkaTekstu.width / 2.0f,
 			ramkaTekstu.top + ramkaTekstu.height / 2.0f);
 		int posTekstuX = posX + szerokosc / 2;
-		int posTekstuY = posY + 14;
+		int posTekstuY = posY + rozmImie / 2 + 2;
 		tekst.setPosition(sf::Vector2f((float)posTekstuX, (float)posTekstuY));
 		okno.draw(tekst);
 		//numery/punkty
@@ -77,12 +79,12 @@ void GUI::WypiszGracza(Gracz* gracz, bool punkty, bool aktywny, int posX, int po
 		else
 			numer = gracz->GetNumer() + 1;
 		tekst.setString(std::to_string(numer));
-		tekst.setCharacterSize(36);
+		tekst.setCharacterSize(rozmNum);
 		ramkaTekstu = tekst.getLocalBounds();
 		tekst.setOrigin(ramkaTekstu.left + ramkaTekstu.width / 2.0f,
 			ramkaTekstu.top + ramkaTekstu.height / 2.0f);
 		posTekstuX = posX + szerokosc / 2;
-		posTekstuY = posY + 48;
+		posTekstuY = posY + rozmNum / 2 + rozmImie + 4;
 		tekst.setPosition(sf::Vector2f((float)posTekstuX, (float)posTekstuY));
 		okno.draw(tekst);
 	}
@@ -90,6 +92,7 @@ void GUI::WypiszGracza(Gracz* gracz, bool punkty, bool aktywny, int posX, int po
 
 void GUI::WypiszGraczy(bool punkty, int aktywny, Gracze* gracze)
 {
+	okno.clear(sf::Color::Black);
 	int odstep = szerokoscOkna / 16;
 	int posX, posY;
 	for (int i = 0; i < gracze->GetIlosc(); i++)
@@ -107,5 +110,31 @@ void GUI::WypiszGraczy(bool punkty, int aktywny, Gracze* gracze)
 		bool czyAktywny = (i == aktywny);
 		this->WypiszGracza(gracze->GetGracz(i), punkty, czyAktywny, posX, posY);
 	}
+		
 	okno.display();
+}
+
+void GUI::WypiszRunde(int runda)
+{
+	okno.clear();
+	sf::Font czcionka;
+	if (czcionka.loadFromFile("impact.ttf"))
+	{
+		sf::Text tekst;
+		tekst.setFont(czcionka);
+		tekst.setFillColor(sf::Color(KOLOR_TEKSTU));
+		std::string tekstRundy;
+		if (runda < 3)
+			tekstRundy = "Runda " + std::to_string(runda);
+		else
+			tekstRundy = "FINA£";
+		tekst.setString(tekstRundy);
+		sf::FloatRect ramkaTekstu = tekst.getLocalBounds();
+		tekst.setOrigin(ramkaTekstu.left + ramkaTekstu.width / 2.0f,
+			ramkaTekstu.top + ramkaTekstu.height / 2.0f);
+		tekst.setPosition(sf::Vector2f((szerokoscOkna / 2.0f), (wysokoscOkna / 2.0f)));
+		tekst.setCharacterSize(wysokoscOkna / 5);
+		okno.draw(tekst);
+		okno.display();
+	}
 }

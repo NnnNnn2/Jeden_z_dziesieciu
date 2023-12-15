@@ -125,7 +125,7 @@ void Gra::Runda()
 			for (int i = 0; i < this->gracze->GetIlosc(); i++)
 			{
 				this->Czekaj();
-				this->PytanieS(0, 0, i);
+				this->PytanieS(0, false, i);
 			}
 		}
 		this->runda++;
@@ -140,7 +140,7 @@ void Gra::Runda()
 		while (this->gracze->GetIloscAktywnych() > 3)
 		{
 			this->Czekaj();
-			this->PytanieS(0, 0, -1);
+			this->PytanieS(0, false, -1);
 		}
 		this->runda++;
 	}

@@ -73,6 +73,9 @@
     <Text Include="pytania2.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="pytaniaNieuzyte.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Font Include="impact.ttf">

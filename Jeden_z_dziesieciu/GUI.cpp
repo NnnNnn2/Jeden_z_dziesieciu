@@ -4,6 +4,7 @@
 #define KOLOR_PRZEGRANEGO 0x1638FB20
 #define KOLOR_SZANSY 0xFFA404FF
 #define KOLOR_TEKSTU 0xFFFFFFFF
+#define KOLOR_TLA 0x00000000
 
 #include "GUI.h"
 
@@ -122,18 +123,22 @@ void GUI::WypiszRunde(int runda)
 	{
 		sf::Text tekst;
 		tekst.setFont(czcionka);
-		tekst.setFillColor(sf::Color(KOLOR_TEKSTU));
+		tekst.setCharacterSize(wysokoscOkna / 5);
+		tekst.setFillColor(sf::Color(KOLOR_TLA));
+		tekst.setOutlineColor(sf::Color(KOLOR_SZANSY));
+		tekst.setOutlineThickness(3.5f);
 		std::string tekstRundy;
 		if (runda < 3)
+		{
 			tekstRundy = "Runda " + std::to_string(runda);
+			tekst.setString(tekstRundy);
+		}
 		else
-			tekstRundy = "FINA£";
-		tekst.setString(tekstRundy);
+			tekst.setString(L"FINA£");
 		sf::FloatRect ramkaTekstu = tekst.getLocalBounds();
 		tekst.setOrigin(ramkaTekstu.left + ramkaTekstu.width / 2.0f,
 			ramkaTekstu.top + ramkaTekstu.height / 2.0f);
 		tekst.setPosition(sf::Vector2f((szerokoscOkna / 2.0f), (wysokoscOkna / 2.0f)));
-		tekst.setCharacterSize(wysokoscOkna / 5);
 		okno.draw(tekst);
 		okno.display();
 	}

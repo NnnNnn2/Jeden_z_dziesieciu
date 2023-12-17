@@ -146,7 +146,6 @@ void Gra::PytanieS(int mnoznik, bool punkty, int aktywny)
 			if (nrGracza == -1)
 				return;
 			this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
-			this->Czekaj();
 		}
 	}
 

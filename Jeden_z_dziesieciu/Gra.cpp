@@ -115,22 +115,39 @@ void Gra::PytanieS(int mnoznik, bool punkty, int aktywny)
 	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
 
 	char znak = 0;
+	bool ok = false;
 	//dobrze / zle
-	while (znak != 'z' && znak != 'd')
-		znak = _getch();
-	//zle
-	if (znak == 'z')
+	while (!ok)
 	{
-		gracze->GetGracz(nrGracza)->DecSzanse();
-		//2 zla odpowiedz w rundzie 1
-		if (runda == 1 && gracze->GetGracz(nrGracza)->GetSzanse() == 1)
+		while (znak != 'z' && znak != 'd' && znak != 'o')
+			znak = _getch();
+		//zle
+		if (znak == 'z')
+		{
 			gracze->GetGracz(nrGracza)->DecSzanse();
-	}
-	if (znak == 'd')
-	{
-		if (this->naSiebie)
-			mnoznik *= 2;
-		gracze->GetGracz(nrGracza)->IncPunkty(mnoznik);
+			//2 zla odpowiedz w rundzie 1
+			if (runda == 1 && gracze->GetGracz(nrGracza)->GetSzanse() == 1)
+				gracze->GetGracz(nrGracza)->DecSzanse();
+			ok = true;
+		}
+		//dobrze
+		if (znak == 'd')
+		{
+			if (this->naSiebie)
+				mnoznik *= 2;
+			gracze->GetGracz(nrGracza)->IncPunkty(mnoznik);
+			ok = true;
+		}
+		//ponownie wybierz gracza
+ 		if (znak == 'o')
+		{
+			znak = 0;
+			nrGracza = this->wyborGracza(aktywny);
+			if (nrGracza == -1)
+				return;
+			this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
+			this->Czekaj();
+		}
 	}
 
 	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);

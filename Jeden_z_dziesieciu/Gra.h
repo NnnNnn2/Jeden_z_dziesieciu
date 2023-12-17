@@ -11,8 +11,11 @@ private:
 	Gracze* gracze;
 	Wyswietlacz* wyswietlacz;
 	int runda;
+	int ostatni;
+	bool naSiebie;
 	void Czekaj();
-	void PytanieS(int mnoznik, bool punkty, int gracz);
+	void PytanieS(int mnoznik, bool punkty, int aktywny);
+	int wyborGracza(int aktywny);
 	void Runda();
 
 public:

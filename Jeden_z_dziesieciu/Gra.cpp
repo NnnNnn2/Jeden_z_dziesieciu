@@ -9,6 +9,8 @@ Gra::Gra(int iloscGraczy)
 	this->gracze->WpiszGraczy();
 	this->pytania->wczytajPytania();
 	this->wyswietlacz = new Wyswietlacz(gracze);
+	this->ostatni = -1;
+	this->naSiebie = false;
 }
 
 Gra::Gra(int iloscGraczy, std::string scierzka)
@@ -18,6 +20,8 @@ Gra::Gra(int iloscGraczy, std::string scierzka)
 	this->gracze->WpiszGraczy();
 	this->pytania->wczytajPytania(scierzka);
 	this->wyswietlacz = new Wyswietlacz(gracze);
+	this->ostatni = -1;
+	this->naSiebie = false;
 }
 
 Gracze* Gra::GetGracze()
@@ -54,47 +58,63 @@ void Gra::Czekaj()
 	return;
 }
 
-void Gra::PytanieS(int mnoznik, bool punkty, int gracz)
+int Gra::wyborGracza(int aktywny)
 {
 	char znak = 0;
 	bool brakSzans = true;
 	int nrGracza;
-	Pytanie* pytanie = this->pytania->GetLosowe();
-	this->wyswietlacz->WypiszPytanie(pytanie, punkty, -1);
-	//wybor gracza
-	if (gracz == -1)
+	if (aktywny == -1)
 	{
 		while (brakSzans)
 		{
 			znak = 0;
+			this->naSiebie = false;
 			while (znak < '1' || znak > '0' + gracze->GetIlosc())
 			{
 				znak = _getch();
 				if (znak == 'p')
 				{
 					//pomin jak nikt sie nie zglosil
-					return;
+					return -1;
 				}
 				if (znak == '0' && gracze->GetIlosc() > 9)
 				{
 					znak = 58;
 					break;
 				}
+ 				if (znak == 's' && this->ostatni >= 0)
+				{
+					znak = this->ostatni + 49;
+					this->naSiebie = true;
+				}
 			}
 			nrGracza = (int)znak - 49;	//odejmujemy kod znaku '0' aby z char zrobiæ int
 			if (this->gracze->GetGracz(nrGracza)->GetSzanse() > 0)
 				brakSzans = false;
 		}
+		this->ostatni = nrGracza;
 	}
 	else			//w pierwszej rundzie kazdy gracz ma szanse
 	{
-		nrGracza = gracz;
+		nrGracza = aktywny;
 	}
+	return nrGracza;
+}
+
+void Gra::PytanieS(int mnoznik, bool punkty, int aktywny)
+{
+	Pytanie* pytanie = this->pytania->GetLosowe();
+	this->wyswietlacz->WypiszPytanie(pytanie, punkty, -1);
+	//wybor gracza
+	int nrGracza = this->wyborGracza(aktywny);
+	if (nrGracza == -1)
+		return;
 	
 	this->wyswietlacz->WypiszPytanie(pytanie, punkty, nrGracza);
 	this->Czekaj();
 	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
 
+	char znak = 0;
 	//dobrze / zle
 	while (znak != 'z' && znak != 'd')
 		znak = _getch();
@@ -107,7 +127,11 @@ void Gra::PytanieS(int mnoznik, bool punkty, int gracz)
 			gracze->GetGracz(nrGracza)->DecSzanse();
 	}
 	if (znak == 'd')
+	{
+		if (this->naSiebie)
+			mnoznik *= 2;
 		gracze->GetGracz(nrGracza)->IncPunkty(mnoznik);
+	}
 
 	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
 }
@@ -147,6 +171,7 @@ void Gra::Runda()
 	//Final
 	if (this->runda == 3)
 	{
+		this->ostatni = -1;
 		this->gracze->Final();
 		this->wyswietlacz->WypiszRunde(runda);
 		this->Czekaj();

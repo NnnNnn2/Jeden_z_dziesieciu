@@ -163,7 +163,6 @@
     <Text Include="pytania.txt" />
     <Text Include="pytania2.txt" />
     <Text Include="pytaniaNieuzyte.txt" />
-    <Text Include="test.txt" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="impact.ttf" />

@@ -67,9 +67,6 @@
     <Text Include="pytania.txt">
       <Filter>Resource Files</Filter>
     </Text>
-    <Text Include="test.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
     <Text Include="pytania2.txt">
       <Filter>Resource Files</Filter>
     </Text>

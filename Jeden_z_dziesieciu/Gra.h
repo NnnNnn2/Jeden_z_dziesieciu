@@ -13,6 +13,7 @@ private:
 	int runda;
 	int ostatni;
 	bool naSiebie;
+	bool zglaszanie;
 	void Czekaj();
 	void PytanieS(int mnoznik, bool punkty, int aktywny);
 	int wyborGracza(int aktywny);

@@ -11,10 +11,11 @@ private:
 	Gracze* gracze;
 public:
 	Wyswietlacz(Gracze* gracze);
-	void WypiszGraczy(bool punkty, int aktywny);
-	void WypiszPytanie(Pytanie* pytanie, bool punkty, int aktywny);
-	void WypiszOdpowiedz(Pytanie* pytanie, bool punkty, int aktywny);
+	void WypiszGraczy(bool punkty, int aktywny, bool zglaszanie);
+	void WypiszPytanie(Pytanie* pytanie, bool punkty, int aktywny, bool zglaszanie);
+	void WypiszOdpowiedz(Pytanie* pytanie, bool punkty, int aktywny, bool zglaszanie);
 	void WypiszRunde(int runda);
+	void WypiszSterowanie(bool zglaszanie);
 	GUI* GetGUI();
 	~Wyswietlacz();
 

@@ -11,6 +11,7 @@ Gra::Gra(int iloscGraczy)
 	this->wyswietlacz = new Wyswietlacz(gracze);
 	this->ostatni = -1;
 	this->naSiebie = false;
+	this->zglaszanie = true;
 }
 
 Gra::Gra(int iloscGraczy, std::string scierzka)
@@ -22,6 +23,7 @@ Gra::Gra(int iloscGraczy, std::string scierzka)
 	this->wyswietlacz = new Wyswietlacz(gracze);
 	this->ostatni = -1;
 	this->naSiebie = false;
+	this->zglaszanie = true;
 }
 
 Gracze* Gra::GetGracze()
@@ -53,8 +55,13 @@ void Gra::Graj()
 void Gra::Czekaj()
 {
 	char znak = 0;
+	
 	while (znak != ' ')
+	{
 		znak = _getch();
+		if (znak == 'j')
+			zglaszanie = !zglaszanie;
+	}
 	return;
 }
 
@@ -63,6 +70,7 @@ int Gra::wyborGracza(int aktywny)
 	char znak = 0;
 	bool brakSzans = true;
 	int nrGracza;
+	char literyNaCyfry[9] = { 'q','w','e','r','t','y','u','i','o' };
 	if (aktywny == -1)
 	{
 		while (brakSzans)
@@ -72,7 +80,7 @@ int Gra::wyborGracza(int aktywny)
 			while (znak < '1' || znak > '0' + gracze->GetIlosc())
 			{
 				znak = _getch();
-				if (znak == 'p')
+				if (znak == 'l')
 				{
 					//pomin jak nikt sie nie zglosil
 					return -1;
@@ -86,6 +94,15 @@ int Gra::wyborGracza(int aktywny)
 				{
 					znak = this->ostatni + 49;
 					this->naSiebie = true;
+				}
+
+				//wybor znaku q-p
+				for (int i = 0; i < 10; i++)
+				{
+					if (znak == 'p' && gracze->GetIlosc() > 9 && zglaszanie)
+						znak = 58;
+					if (znak == literyNaCyfry[i] && zglaszanie)
+						znak = (char)i + 49;
 				}
 			}
 			nrGracza = (int)znak - 49;	//odejmujemy kod znaku '0' aby z char zrobiæ int
@@ -104,22 +121,22 @@ int Gra::wyborGracza(int aktywny)
 void Gra::PytanieS(int mnoznik, bool punkty, int aktywny)
 {
 	Pytanie* pytanie = this->pytania->GetLosowe();
-	this->wyswietlacz->WypiszPytanie(pytanie, punkty, -1);
+	this->wyswietlacz->WypiszPytanie(pytanie, punkty, -1, zglaszanie);
 	//wybor gracza
 	int nrGracza = this->wyborGracza(aktywny);
 	if (nrGracza == -1)
 		return;
 	
-	this->wyswietlacz->WypiszPytanie(pytanie, punkty, nrGracza);
+	this->wyswietlacz->WypiszPytanie(pytanie, punkty, nrGracza, zglaszanie);
 	this->Czekaj();
-	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
+	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza, zglaszanie);
 
 	char znak = 0;
 	bool ok = false;
 	//dobrze / zle
 	while (!ok)
 	{
-		while (znak != 'z' && znak != 'd' && znak != 'o')
+		while (znak != 'z' && znak != 'd' && znak != 'k')
 			znak = _getch();
 		//zle
 		if (znak == 'z')
@@ -139,17 +156,17 @@ void Gra::PytanieS(int mnoznik, bool punkty, int aktywny)
 			ok = true;
 		}
 		//ponownie wybierz gracza
- 		if (znak == 'o')
+ 		if (znak == 'k')
 		{
 			znak = 0;
 			nrGracza = this->wyborGracza(aktywny);
 			if (nrGracza == -1)
 				return;
-			this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
+			this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza, zglaszanie);
 		}
 	}
 
-	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza);
+	this->wyswietlacz->WypiszOdpowiedz(pytanie, punkty, nrGracza, zglaszanie);
 }
 
 void Gra::Runda()
@@ -159,7 +176,7 @@ void Gra::Runda()
 	{
 		this->wyswietlacz->WypiszRunde(runda);
 		this->Czekaj();
-		this->wyswietlacz->WypiszGraczy(false, -1);
+		this->wyswietlacz->WypiszGraczy(false, -1, zglaszanie);
 		for (int j = 0; j < 2; j++)
 		{
 			for (int i = 0; i < this->gracze->GetIlosc(); i++)
@@ -175,7 +192,7 @@ void Gra::Runda()
 	{
 		this->wyswietlacz->WypiszRunde(runda);
 		this->Czekaj();
-		this->wyswietlacz->WypiszGraczy(false, -1);
+		this->wyswietlacz->WypiszGraczy(false, -1, zglaszanie);
 		//czy przejsc do finalu
 		while (this->gracze->GetIloscAktywnych() > 3)
 		{
@@ -191,7 +208,7 @@ void Gra::Runda()
 		this->gracze->Final();
 		this->wyswietlacz->WypiszRunde(runda);
 		this->Czekaj();
-		this->wyswietlacz->WypiszGraczy(true, -1);
+		this->wyswietlacz->WypiszGraczy(true, -1, zglaszanie);
 		int zadanePytania = 0;
 		while (this->gracze->GetIloscAktywnych() > 0 && zadanePytania < ILOSC_PYTAN_FINALOWYCH)
 		{
@@ -200,7 +217,7 @@ void Gra::Runda()
 			zadanePytania++;
 		}
 		this->gracze->punktyZaSzanse(10);
-		this->wyswietlacz->WypiszGraczy(true, -1);
+		this->wyswietlacz->WypiszGraczy(true, -1, zglaszanie);
 		_getch();
 	}
 }

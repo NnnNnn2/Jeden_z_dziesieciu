@@ -7,7 +7,7 @@ William Szekspir.
 Jaka jest najwy¿sza góra na œwiecie?
 Mount Everest.
 Które zwierzê jest najwiêksze na ziemi?
-Wieloryb b³êkitny.
+P³etwal b³êkitny.
 Kiedy mia³a miejsce pierwsza podró¿ cz³owieka na Ksiê¿yc?
 W 1969 roku.
 Jak nazywa siê najwiêksza rzeka na œwiecie?
@@ -26,8 +26,6 @@ Które pañstwo jest najwiêkszym producentem kawy na œwiecie?
 Brazylia.
 W którym roku rozpoczê³a siê II wojna œwiatowa?
 1939.
-Jakie s¹ trzy najwa¿niejsze sk³adniki od¿ywcze w diecie cz³owieka?
-Bia³ko, t³uszcze, wêglowodany.
 Kto by³ autorem "Z³odzieja z Bagdadu"?
 Antoine Galland.
 Jak nazywa siê najwiêksza wyspa na œwiecie?
@@ -40,15 +38,9 @@ Kto by³ autorem "Ma³ego Ksiêcia"?
 Antoine de Saint-Exupéry.
 Jaka jest stolica Japonii?
 Tokio.
-Kto by³ autorem "Czarodziejskiego górala"?
-Jan Brzechwa.
-Która planeta jest znana jako "Poranna Gwiazda" lub "Wieczorna Gwiazda"?
-Wenus.
 Kto by³ pierwszym cz³owiekiem na Ksiê¿ycu?
 Neil Armstrong.
-Jaka jest najwiêksza wysokoœæ góry McKinley w Ameryce Pó³nocnej?
-6 190 metrów.
-Kto by³ autorem "Z misj¹ na dnie mórz"?
+Kto by³ autorem "W 80 dni dooko³a œwiata"?
 Jules Verne.
 Jak nazywa siê najwiêksze jezioro na œwiecie?
 Morze Kaspijskie.
@@ -88,5 +80,61 @@ Kto by³ autorem "Balladyny"?
 Juliusz S³owacki.
 Kto wynalaz³ telefon?
 Alexander Graham Bell.
-Jak nazywa siê najwiêksze jezioro w Europie?
-Morze Ba³tyckie.
+Co, oprócz buraków, jest podstawowym sk³adnikiem æwik³y?
+Chrzan
+Jak nazywa siê terytorium pañstwa, otoczone ze wszystkich stron l¹du terytorium innego pañstwa?
+Enklawa
+Która planeta uk³adu s³onecznego œwieci w³asnym œwiat³em?
+¯adna
+Ile sekund ma godzina?
+3600
+Je¿eli samochód przeje¿d¿a 1 km w minutê, to w ile sekund przeje¿d¿a 100 m?
+6
+Które pañstwo skandynawskie graniczy z Rosj¹, Szwecj¹ i Finlandi¹?
+Norwegia
+Czips oznacza zwykle cienki, sma¿ony plasterek jakiego warzywa?
+Ziemniaka
+Anatomia cz³owieka. Miêsieñ czworog³owy uda prostuje, czy zgina kolano?
+Prostuje
+Czy anakonda jest wê¿em jadowitym?
+Nie
+Czy Chiny s¹ cz³onkiem Organizacji Narodów Zjednoczonych?
+Tak
+Jak mia³ na imiê syn Macieja Boryny z "Ch³opów" W³adys³awa Reymonta?
+Antek
+Genera³ Franco by³ dyktatorem którego europejskiego pañstwa?
+Hiszpanii
+CO JEST G£ÓWNYM SK£ADNIKIEM RISOTTO?
+Ry¿
+ILE PRZEDSIONKÓW MA SERCE CZ£OWIEKA?
+2
+W którym roku odby³ys siê ZIMOWE IGRZYSKA OLIMPIJSKIE W PJONGCZANGU
+2018
+CO JEST G£ÓWNYM SK£ADNIKIEM ZIEMSKIEJ ATMOSFERY?
+Azot
+CZY WODA PODCZAS ZAMARZANIA ZMNIEJSZA SWOJ¥ OBJÊTOŒÆ?
+Nie
+KTO JEST AUTOREM MUZYKI WYKORZYSTANEJ W HYMNIE UNII EUROPEJSKIEJ?
+Ludwig van Beethoven
+JAK W MITOLOGII GRECKIEJ NAZYWA£ SIÊ BÓG KOWALSTWA?
+Hefajstos
+W KTÓRYCH GÓRACH ZNAJDUJE SIÊ JEZIORO SOLIÑSKIE?
+w Bieszczadach
+W KTÓRYM ROKU ALEKSANDER KWAŒNIEWSKI ZOSTA£ PO RAZ PIERWSZY PREZYDENTEM RP?
+1995
+"W DNIU ŒLUBU MEJ CÓRKI PROSISZ, BYM MORDOWA£ ZA PIENI¥DZE". JAKI TYTU£ NOSI FILM, Z KTÓREGO POCHODZI TEN CYTAT?
+"Ojciec chrzestny"
+SEKWANA UCHODZI DO:
+kana³u La Manche
+JAKIE STANOWISKO ZAJMOWA£ W ZAKONIE KRZY¯ACKIM ULRICH VON JUNGINGEN?
+wielki mistrz
+UNIWERSYTET IM. ADAMA MICKIEWICZA MIEŒCI SIÊ W:
+Poznaniu
+WYSTÊPUJ¥CA W POLSCE TRASZKA ZWYCZAJNA JEST:
+p³azem
+JEDN¥ Z CHORÓB PRZENOSZONYCH PRZEZ KLESZCZE JEST:
+borelioza
+JAKA WALUTA OBOWI¥ZUJE W AUSTRII?
+euro
+CO OZNACZA S£OWO "KWESTIONOWAÆ"?
+podawaæ w w¹tpliwoœæ

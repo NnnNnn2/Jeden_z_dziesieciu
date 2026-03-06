@@ -1,0 +1,13 @@
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/CMakeFiles/edit_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/CMakeFiles/list_install_components.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/CMakeFiles/install.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/CMakeFiles/install/local.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/vorbis.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/vorbisenc.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/vorbisfile.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/edit_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/rebuild_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/list_install_components.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/install.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/CMakeFiles/install/local.dir

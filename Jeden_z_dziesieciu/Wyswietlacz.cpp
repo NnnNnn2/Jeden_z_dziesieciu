@@ -74,7 +74,7 @@ void Wyswietlacz::WypiszSterowanie(bool zglaszanie)
 	std::cout << "D - Dobrze\nZ - le\n";
 	std::cout << "J - Prze³¹cz zg³aszanie\n";
 	std::cout << "K - Ponownie wybierz gracza\n";
-	std::cout << "L - PomiŸ pytanie\n";
+	std::cout << "L - Pomiñ pytanie\n";
 	std::cout << "S - Na siebie\n";
 	std::cout << "1-0 / Q-P - wybór gracza\n\nZG£ASZANIE: ";
 	if (zglaszanie)

@@ -1,0 +1,6 @@
+Package: miniaudio
+Version: 0.11.23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2e50842a82f23d7ee67f764324616e47e4688096ce4aaece3a4c1da3a8fff03a
+Description: Audio playback and capture library written in C, in a single source file

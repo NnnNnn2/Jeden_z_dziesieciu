@@ -1,0 +1,17 @@
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/tools/brotli/brotli.exe
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlienc.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlienc.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlidec.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlidec.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/brotlicommon.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/bin/brotlicommon.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/unofficial-brotli/unofficial-brotli-config.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/unofficial-brotli/unofficial-brotli-config-debug.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlicommon.pc
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlidec.pc
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/lib/pkgconfig/libbrotlienc.pc
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/man/man1/brotli.1
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/man/man3/constants.h.3
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/man/man3/decode.h.3
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/man/man3/encode.h.3
+B:/1z10/vcpkg_installed/vcpkg/pkgs/brotli_x64-windows/debug/share/man/man3/types.h.3

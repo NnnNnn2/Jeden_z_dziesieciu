@@ -1,0 +1,8 @@
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/bz2.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/bzip2.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/bzip2recover.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/edit_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/rebuild_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/list_install_components.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/install.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/bzip2/x64-windows-rel/CMakeFiles/install/local.dir

@@ -1,0 +1,11 @@
+prefix=B:/1z10/vcpkg_installed/vcpkg/pkgs/libflac_x64-windows/debug
+exec_prefix=B:/1z10/vcpkg_installed/vcpkg/pkgs/libflac_x64-windows/debug
+libdir=B:/1z10/vcpkg_installed/vcpkg/pkgs/libflac_x64-windows/debug/lib
+includedir=B:/1z10/vcpkg_installed/vcpkg/pkgs/libflac_x64-windows/debug/include
+
+Name: FLAC++
+Description: Free Lossless Audio Codec Library (C++ API)
+Version: 1.5.0
+Requires: flac
+Libs: -L${libdir} -lFLAC++
+Cflags: -I${includedir}

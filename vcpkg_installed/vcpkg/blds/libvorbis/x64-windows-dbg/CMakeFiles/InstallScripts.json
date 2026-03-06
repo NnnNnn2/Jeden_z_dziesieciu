@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/cmake_install.cmake",
+		"B:/1z10/vcpkg_installed/vcpkg/blds/libvorbis/x64-windows-dbg/lib/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

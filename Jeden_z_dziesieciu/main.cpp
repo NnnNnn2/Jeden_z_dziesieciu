@@ -3,34 +3,20 @@
 #include <conio.h>
 using namespace std;
 
-int main()
+int main(int argc, char* argv[])
 {
-	setlocale(LC_CTYPE, "Polish");
-	int iloscGraczy;
-	cout << "Podaj ilosc graczy: ";
-	cin >> iloscGraczy;
-	//Gra* gra = new Gra(iloscGraczy, "test.txt");
-	Gra* gra = new Gra(iloscGraczy, "pytania2.txt");
-	/*/Pytania* pytania = gra->GetPytania();
-	system("cls");
-	gra->GetGracze()->WypiszGraczy();
-	//cout << "\n Pytania:";
-	//pytania->wypiszPytania();
-	int iloscPytan = pytania->GetIlosc();
+    setlocale(LC_CTYPE, "Polish");
+    int iloscGraczy;
+    const char* filename = (argc > 1) ? argv[1] : "pytania.txt";
 
-	cout << iloscPytan;
-	cout << "\n\nLosowe pytania: ";
-	for (int i = 0; i < iloscPytan; i++)
-	{
-		cout << i;
-		pytania->GetLosowe()->wypiszPytanie();
-		cout << "\n\n";
-	}	
-	Pytanie* losowe = pytania->GetLosowe();
-	gra->GetWyswietlacz()->WypiszPytanie(losowe, false,-1);
-	char znak = _getch();
-	gra->GetWyswietlacz()->WypiszOdpowiedz(losowe, false,3);
-	while (true);*/
-	gra->Graj();
-	return 0;
+    if (argc > 2) {
+        iloscGraczy = atoi(argv[2]);
+    } else {
+        cout << "Podaj ilosc graczy: ";
+        cin >> iloscGraczy;
+    }
+
+    Gra* gra = new Gra(iloscGraczy, filename);
+    gra->Graj();
+    return 0;
 }

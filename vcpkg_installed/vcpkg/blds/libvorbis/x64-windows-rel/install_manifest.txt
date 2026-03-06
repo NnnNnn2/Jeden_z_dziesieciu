@@ -1,0 +1,16 @@
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/pkgconfig/vorbis.pc
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/pkgconfig/vorbisenc.pc
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/pkgconfig/vorbisfile.pc
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/include/vorbis/codec.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/include/vorbis/vorbisenc.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/include/vorbis/vorbisfile.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/vorbis.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/bin/vorbis.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/vorbisenc.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/bin/vorbisenc.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/vorbisfile.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/bin/vorbisfile.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/cmake/Vorbis/VorbisTargets.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/cmake/Vorbis/VorbisTargets-release.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/cmake/Vorbis/VorbisConfig.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libvorbis_x64-windows/lib/cmake/Vorbis/VorbisConfigVersion.cmake

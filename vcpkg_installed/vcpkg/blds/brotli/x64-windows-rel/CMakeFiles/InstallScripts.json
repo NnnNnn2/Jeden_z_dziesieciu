@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-rel/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

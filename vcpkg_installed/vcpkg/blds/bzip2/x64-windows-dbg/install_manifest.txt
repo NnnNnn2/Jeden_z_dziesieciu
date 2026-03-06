@@ -1,0 +1,2 @@
+B:/1z10/vcpkg_installed/vcpkg/pkgs/bzip2_x64-windows/debug/lib/bz2d.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/bzip2_x64-windows/debug/bin/bz2d.dll

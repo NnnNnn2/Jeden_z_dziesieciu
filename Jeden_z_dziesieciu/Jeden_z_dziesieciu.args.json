@@ -1,0 +1,10 @@
+{
+  "FileVersion": 2,
+  "Id": "c5f864bb-da36-4639-851d-9f5fab883655",
+  "Items": [
+    {
+      "Id": "c9467eee-6b7c-4cdb-a955-67766af40457",
+      "Command": "\"pytania2.txt\""
+    }
+  ]
+}

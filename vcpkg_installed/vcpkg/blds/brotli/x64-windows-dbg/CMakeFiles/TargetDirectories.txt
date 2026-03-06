@@ -1,0 +1,9 @@
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/brotlicommon.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/brotlidec.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/brotlienc.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/brotli.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/edit_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/rebuild_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/list_install_components.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/install.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/brotli/x64-windows-dbg/CMakeFiles/install/local.dir

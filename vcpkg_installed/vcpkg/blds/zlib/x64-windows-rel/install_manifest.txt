@@ -1,0 +1,4 @@
+B:/1z10/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/lib/zlib.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/bin/zlib1.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/include/zconf.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/zlib_x64-windows/include/zlib.h

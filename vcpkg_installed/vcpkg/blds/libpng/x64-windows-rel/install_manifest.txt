@@ -1,0 +1,17 @@
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng16.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/bin/libpng16.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/png.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/pngconf.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/pnglibconf.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/png.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/pngconf.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/include/libpng16/pnglibconf.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/pkgconfig/libpng16.pc
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng/libpng16.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng/libpng16-release.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/libpng16.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/bin/libpng16.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGTargets.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGTargets-release.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGConfig.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libpng_x64-windows/lib/cmake/PNG/PNGConfigVersion.cmake

@@ -1,0 +1,10 @@
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/lib/ogg.lib
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/bin/ogg.dll
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/include/ogg/config_types.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/include/ogg/ogg.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/include/ogg/os_types.h
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/lib/cmake/Ogg/OggTargets.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/lib/cmake/Ogg/OggTargets-debug.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/lib/cmake/Ogg/OggConfig.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/lib/cmake/Ogg/OggConfigVersion.cmake
+B:/1z10/vcpkg_installed/vcpkg/pkgs/libogg_x64-windows/debug/lib/pkgconfig/ogg.pc

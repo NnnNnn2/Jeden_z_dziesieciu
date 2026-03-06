@@ -1,0 +1,7 @@
+{
+	"name": "1z10",
+	"version": "2.1.37",
+	"dependencies": [
+		"sfml"
+	]
+}

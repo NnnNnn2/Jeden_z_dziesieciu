@@ -1,0 +1,8 @@
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/freetype.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/package.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/package_source.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/edit_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/rebuild_cache.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/list_install_components.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/install.dir
+B:/1z10/vcpkg_installed/vcpkg/blds/freetype/x64-windows-rel/CMakeFiles/install/local.dir
